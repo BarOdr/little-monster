@@ -14,6 +14,7 @@
 		CCECF3051CBD058600AA0612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCECF3031CBD058600AA0612 /* LaunchScreen.storyboard */; };
 		CCECF3101CBD058600AA0612 /* little_monsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF30F1CBD058600AA0612 /* little_monsterTests.swift */; };
 		CCECF31B1CBD058600AA0612 /* little_monsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF31A1CBD058600AA0612 /* little_monsterUITests.swift */; };
+		CCECF3291CBD171000AA0612 /* DragImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF3281CBD171000AA0612 /* DragImg.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CCECF3161CBD058600AA0612 /* little-monsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "little-monsterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCECF31A1CBD058600AA0612 /* little_monsterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = little_monsterUITests.swift; sourceTree = "<group>"; };
 		CCECF31C1CBD058600AA0612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCECF3281CBD171000AA0612 /* DragImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				CCECF3011CBD058600AA0612 /* Assets.xcassets */,
 				CCECF3031CBD058600AA0612 /* LaunchScreen.storyboard */,
 				CCECF3061CBD058600AA0612 /* Info.plist */,
+				CCECF3281CBD171000AA0612 /* DragImg.swift */,
 			);
 			path = "little-monster";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCECF3291CBD171000AA0612 /* DragImg.swift in Sources */,
 				CCECF2FD1CBD058600AA0612 /* ViewController.swift in Sources */,
 				CCECF2FB1CBD058600AA0612 /* AppDelegate.swift in Sources */,
 			);
