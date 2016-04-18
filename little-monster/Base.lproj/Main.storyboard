@@ -122,8 +122,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="b5v-Eh-MqU"/>
-                                <exclude reference="r4c-9e-P2D"/>
                                 <exclude reference="5tg-Eb-PW5"/>
                                 <exclude reference="AtD-wF-DPj"/>
                                 <exclude reference="BAJ-aL-h2I"/>
@@ -134,6 +132,8 @@
                                 <exclude reference="epM-RV-nya"/>
                                 <exclude reference="wjc-Lq-2RQ"/>
                                 <exclude reference="xbu-f7-qiy"/>
+                                <exclude reference="b5v-Eh-MqU"/>
+                                <exclude reference="r4c-9e-P2D"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -153,6 +153,9 @@
                         <outlet property="foodImg" destination="NiW-Ud-yLf" id="Ycg-6u-14K"/>
                         <outlet property="heartImg" destination="JzL-i6-n3F" id="HYw-Mn-YLw"/>
                         <outlet property="monsterImg" destination="MFe-Kp-xIU" id="coc-PL-YDY"/>
+                        <outlet property="penalty1Img" destination="ipr-eN-JZA" id="BQn-qq-WKv"/>
+                        <outlet property="penalty2Img" destination="H8V-WS-aOy" id="C98-cQ-8Gx"/>
+                        <outlet property="penalty3Img" destination="GqG-Zd-ZBT" id="es5-PH-J1b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

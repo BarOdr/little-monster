@@ -24,6 +24,7 @@ class MonsterImg: UIImageView {
         
         self.image = UIImage(named: "idle1.png")
         self.animationImages = nil
+        
         var imgArray = [UIImage]()
         
         for i in 1...4 {
