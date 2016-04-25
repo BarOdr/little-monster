@@ -16,6 +16,11 @@
 		CCECF31B1CBD058600AA0612 /* little_monsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF31A1CBD058600AA0612 /* little_monsterUITests.swift */; };
 		CCECF3291CBD171000AA0612 /* DragImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF3281CBD171000AA0612 /* DragImg.swift */; };
 		CCECF32B1CBD209000AA0612 /* MonsterImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF32A1CBD209000AA0612 /* MonsterImg.swift */; };
+		CCEE9D8B1CCE33AD00519B11 /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CCEE9D861CCE33AD00519B11 /* cave-music.mp3 */; };
+		CCEE9D8C1CCE33AD00519B11 /* bite.wav in Resources */ = {isa = PBXBuildFile; fileRef = CCEE9D871CCE33AD00519B11 /* bite.wav */; };
+		CCEE9D8D1CCE33AD00519B11 /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = CCEE9D881CCE33AD00519B11 /* death.wav */; };
+		CCEE9D8E1CCE33AD00519B11 /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = CCEE9D891CCE33AD00519B11 /* heart.wav */; };
+		CCEE9D8F1CCE33AD00519B11 /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = CCEE9D8A1CCE33AD00519B11 /* skull.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		CCECF31C1CBD058600AA0612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCECF3281CBD171000AA0612 /* DragImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImg.swift; sourceTree = "<group>"; };
 		CCECF32A1CBD209000AA0612 /* MonsterImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImg.swift; sourceTree = "<group>"; };
+		CCEE9D861CCE33AD00519B11 /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cave-music.mp3"; sourceTree = "<group>"; };
+		CCEE9D871CCE33AD00519B11 /* bite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bite.wav; sourceTree = "<group>"; };
+		CCEE9D881CCE33AD00519B11 /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
+		CCEE9D891CCE33AD00519B11 /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
+		CCEE9D8A1CCE33AD00519B11 /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,11 @@
 		CCECF2F91CBD058600AA0612 /* little-monster */ = {
 			isa = PBXGroup;
 			children = (
+				CCEE9D861CCE33AD00519B11 /* cave-music.mp3 */,
+				CCEE9D871CCE33AD00519B11 /* bite.wav */,
+				CCEE9D881CCE33AD00519B11 /* death.wav */,
+				CCEE9D891CCE33AD00519B11 /* heart.wav */,
+				CCEE9D8A1CCE33AD00519B11 /* skull.wav */,
 				CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */,
 				CCECF2FC1CBD058600AA0612 /* ViewController.swift */,
 				CCECF2FE1CBD058600AA0612 /* Main.storyboard */,
@@ -238,7 +253,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEE9D8F1CCE33AD00519B11 /* skull.wav in Resources */,
+				CCEE9D8C1CCE33AD00519B11 /* bite.wav in Resources */,
+				CCEE9D8D1CCE33AD00519B11 /* death.wav in Resources */,
+				CCEE9D8E1CCE33AD00519B11 /* heart.wav in Resources */,
 				CCECF3051CBD058600AA0612 /* LaunchScreen.storyboard in Resources */,
+				CCEE9D8B1CCE33AD00519B11 /* cave-music.mp3 in Resources */,
 				CCECF3021CBD058600AA0612 /* Assets.xcassets in Resources */,
 				CCECF3001CBD058600AA0612 /* Main.storyboard in Resources */,
 			);
@@ -493,6 +513,7 @@
 				CCECF3211CBD058600AA0612 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCECF3221CBD058600AA0612 /* Build configuration list for PBXNativeTarget "little-monsterTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +522,7 @@
 				CCECF3241CBD058600AA0612 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCECF3251CBD058600AA0612 /* Build configuration list for PBXNativeTarget "little-monsterUITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +531,7 @@
 				CCECF3271CBD058600AA0612 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
