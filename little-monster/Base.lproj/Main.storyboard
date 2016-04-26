@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Minecraft.ttf">
+            <string>Minecraft</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -68,20 +73,20 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="U5a-hq-cAV">
-                                <rect key="frame" x="152" y="77" width="297" height="98"/>
+                                <rect key="frame" x="152" y="77" width="285" height="98"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="JzL-i6-n3F" customClass="DragImg" customModule="little_monster" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="99" height="98"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="uZx-sU-loT" customClass="DragImg" customModule="little_monster" customModuleProvider="target">
-                                        <rect key="frame" x="99" y="0.0" width="99" height="98"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="uZx-sU-loT" customClass="DragImg" customModule="little_monster" customModuleProvider="target">
+                                        <rect key="frame" x="95" y="0.0" width="95" height="98"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="95" id="1YT-cl-zdo"/>
                                             <constraint firstAttribute="height" constant="98" id="O4X-aR-6Zo"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="NiW-Ud-yLf" customClass="DragImg" customModule="little_monster" customModuleProvider="target">
-                                        <rect key="frame" x="198" y="0.0" width="99" height="98"/>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="NiW-Ud-yLf" customClass="DragImg" customModule="little_monster" customModuleProvider="target">
+                                        <rect key="frame" x="190" y="0.0" width="95" height="98"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -98,9 +103,24 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHZ-Jc-JxU" userLabel="Revive">
+                                <rect key="frame" x="150" y="183" width="294" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="tIu-9S-tFe"/>
+                                    <constraint firstAttribute="height" constant="72" id="xyv-fd-zN5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="22"/>
+                                <state key="normal" title="- Revive your pet -">
+                                    <color key="titleColor" red="0.75564903846153841" green="0.75564903846153841" blue="0.75564903846153841" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="revive" destination="BYZ-38-t0r" eventType="touchUpInside" id="cjj-Rb-v7k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zHZ-Jc-JxU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0bG-hN-rMP"/>
                             <constraint firstItem="U5a-hq-cAV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-25" id="5tg-Eb-PW5"/>
                             <constraint firstItem="SVA-a8-pc6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7WO-y7-OMl"/>
                             <constraint firstItem="U5a-hq-cAV" firstAttribute="top" secondItem="gAH-K1-lMy" secondAttribute="bottom" constant="8" id="AtD-wF-DPj"/>
@@ -121,14 +141,20 @@
                             <constraint firstItem="U5a-hq-cAV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="epM-RV-nya"/>
                             <constraint firstItem="QSB-Da-KEs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fBV-Y1-9cI"/>
                             <constraint firstItem="MFe-Kp-xIU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-110" id="gUG-vs-aJC"/>
+                            <constraint firstItem="zHZ-Jc-JxU" firstAttribute="top" secondItem="U5a-hq-cAV" secondAttribute="bottom" constant="8" id="iJF-NY-4uo"/>
                             <constraint firstItem="gAH-K1-lMy" firstAttribute="centerY" secondItem="SVA-a8-pc6" secondAttribute="centerY" id="oyG-nQ-Qq8"/>
                             <constraint firstItem="gAH-K1-lMy" firstAttribute="centerX" secondItem="SVA-a8-pc6" secondAttribute="centerX" id="r4c-9e-P2D"/>
                             <constraint firstItem="SVA-a8-pc6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rsh-7b-kdQ"/>
                             <constraint firstItem="U5a-hq-cAV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wjc-Lq-2RQ"/>
+                            <constraint firstItem="zHZ-Jc-JxU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="xLf-Tz-X6I"/>
                             <constraint firstItem="U5a-hq-cAV" firstAttribute="top" secondItem="gAH-K1-lMy" secondAttribute="bottom" constant="15" id="xbu-f7-qiy"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="iJF-NY-4uo"/>
+                                <exclude reference="xLf-Tz-X6I"/>
+                                <exclude reference="b5v-Eh-MqU"/>
+                                <exclude reference="r4c-9e-P2D"/>
                                 <exclude reference="5tg-Eb-PW5"/>
                                 <exclude reference="AtD-wF-DPj"/>
                                 <exclude reference="BAJ-aL-h2I"/>
@@ -139,14 +165,18 @@
                                 <exclude reference="epM-RV-nya"/>
                                 <exclude reference="wjc-Lq-2RQ"/>
                                 <exclude reference="xbu-f7-qiy"/>
-                                <exclude reference="b5v-Eh-MqU"/>
-                                <exclude reference="r4c-9e-P2D"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <include reference="xLf-Tz-X6I"/>
                                 <include reference="5tg-Eb-PW5"/>
                                 <include reference="eVs-E2-r8A"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="iJF-NY-4uo"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -163,12 +193,31 @@
                         <outlet property="penalty1Img" destination="ipr-eN-JZA" id="BQn-qq-WKv"/>
                         <outlet property="penalty2Img" destination="H8V-WS-aOy" id="C98-cQ-8Gx"/>
                         <outlet property="penalty3Img" destination="GqG-Zd-ZBT" id="es5-PH-J1b"/>
+                        <outlet property="reviveButton" destination="zHZ-Jc-JxU" id="AcN-CY-jtD"/>
                         <outlet property="waterImg" destination="uZx-sU-loT" id="8bR-5o-ROB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320" y="367"/>
+            <point key="canvasLocation" x="429" y="265"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="O1P-3e-WKv">
+            <objects>
+                <viewController id="sBb-WH-6lG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="csY-Nc-bBf"/>
+                        <viewControllerLayoutGuide type="bottom" id="f4Q-0h-5AQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z4v-CU-Gbx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="165-xt-w7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-198" y="265.5"/>
         </scene>
     </scenes>
     <resources>

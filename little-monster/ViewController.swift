@@ -19,8 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty1Img: UIImageView!
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
+    @IBOutlet weak var reviveButton: UIButton!
     
     let DIM_ALPHA: CGFloat = 0.2
+    let INVISIBLE: CGFloat = 0.0
     let OPAQUE: CGFloat = 1.0
     let MAX_PENALTIES = 3
     
@@ -35,6 +37,7 @@ class ViewController: UIViewController {
     var sfxDeath: AVAudioPlayer!
     var sfxSkull: AVAudioPlayer!
     var sfxWater: AVAudioPlayer!
+    var sfxRevive: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +45,6 @@ class ViewController: UIViewController {
         foodImg.dropTarget = monsterImg
         heartImg.dropTarget = monsterImg
         waterImg.dropTarget = monsterImg
-        
-        penalty1Img.alpha = DIM_ALPHA
-        penalty2Img.alpha = DIM_ALPHA
-        penalty3Img.alpha = DIM_ALPHA
-        
-        heartImg.alpha = DIM_ALPHA
-        foodImg.alpha = DIM_ALPHA
-        waterImg.alpha = DIM_ALPHA
         
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
@@ -61,6 +56,7 @@ class ViewController: UIViewController {
             try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
             try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
             try sfxWater = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("water", ofType: "wav")!))
+            try sfxRevive = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("revive", ofType: "wav")!))
             
             musicPlayer.prepareToPlay()
             musicPlayer.play()
@@ -70,6 +66,9 @@ class ViewController: UIViewController {
             sfxHeart.prepareToPlay()
             sfxSkull.prepareToPlay()
             sfxWater.prepareToPlay()
+            sfxRevive.prepareToPlay()
+            
+            dimImgs()
             
         } catch let err as NSError {
             print(err.debugDescription)
@@ -181,6 +180,35 @@ class ViewController: UIViewController {
         timer.invalidate()
         monsterImg.playDeathAnimation()
         sfxDeath.play()
+        foodImg.alpha = INVISIBLE
+        heartImg.alpha = INVISIBLE
+        waterImg.alpha = INVISIBLE
+        reviveButton.hidden = false
+        
+    }
+    
+
+    
+    func dimImgs() {
+        penalty1Img.alpha = DIM_ALPHA
+        penalty2Img.alpha = DIM_ALPHA
+        penalty3Img.alpha = DIM_ALPHA
+        
+        heartImg.alpha = DIM_ALPHA
+        foodImg.alpha = DIM_ALPHA
+        waterImg.alpha = DIM_ALPHA
+    }
+    
+    @IBAction func revive() {
+        reviveButton.hidden = true
+        monsterImg.playIdleAnimation()
+        penalties = 0
+        monsterHappy = true
+        dimImgs()
+        startTimer()
+        sfxRevive.play()
+        
+        
     }
 }
 
