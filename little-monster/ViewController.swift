@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     var penalties = 0
     var timer: NSTimer!
-    var monsterHappy = false
+    var monsterHappy = true
     var currentItem: UInt32 = 0
     
     var musicPlayer: AVAudioPlayer!
@@ -43,6 +43,10 @@ class ViewController: UIViewController {
         penalty1Img.alpha = DIM_ALPHA
         penalty2Img.alpha = DIM_ALPHA
         penalty3Img.alpha = DIM_ALPHA
+        
+        heartImg.alpha = DIM_ALPHA
+        foodImg.alpha = DIM_ALPHA
+        
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
         
