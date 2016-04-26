@@ -40,6 +40,9 @@ class ViewController: UIViewController {
     var sfxSkull: AVAudioPlayer!
     var sfxWater: AVAudioPlayer!
     var sfxRevive: AVAudioPlayer!
+    var sfxHunger: AVAudioPlayer!
+    var sfxThirst: AVAudioPlayer!
+    var sfxKiss: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +64,9 @@ class ViewController: UIViewController {
             try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
             try sfxWater = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("water", ofType: "wav")!))
             try sfxRevive = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("revive", ofType: "wav")!))
+            try sfxHunger = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("hunger", ofType: "wav")!))
+            try sfxThirst = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("thirst", ofType: "aif")!))
+            try sfxKiss = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("kiss", ofType: "mp3")!))
             
             musicPlayer.prepareToPlay()
             musicPlayer.play()
@@ -71,6 +77,9 @@ class ViewController: UIViewController {
             sfxSkull.prepareToPlay()
             sfxWater.prepareToPlay()
             sfxRevive.prepareToPlay()
+            sfxHunger.prepareToPlay()
+            sfxThirst.prepareToPlay()
+            sfxKiss.prepareToPlay()
             
             dimNeeds()
             dimPenalties()
@@ -158,6 +167,7 @@ class ViewController: UIViewController {
             
             heartImg.alpha = OPAQUE
             heartImg.userInteractionEnabled = true
+            sfxKiss.play()
         } else if rand == 1 {
             heartImg.alpha = DIM_ALPHA
             heartImg.userInteractionEnabled = false
@@ -167,6 +177,7 @@ class ViewController: UIViewController {
             
             foodImg.alpha = OPAQUE
             foodImg.userInteractionEnabled = true
+            sfxHunger.play()
         } else {
             foodImg.alpha = DIM_ALPHA
             foodImg.userInteractionEnabled = false
@@ -176,6 +187,7 @@ class ViewController: UIViewController {
             
             waterImg.alpha = OPAQUE
             waterImg.userInteractionEnabled = true
+            sfxThirst.play()
         }
         
         currentItem = rand

@@ -11,6 +11,9 @@
 		CC045BF41CCF8CFE009FEAAC /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC045BF31CCF8CFE009FEAAC /* Minecraft.ttf */; };
 		CC045BF61CCF9454009FEAAC /* revive.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC045BF51CCF9454009FEAAC /* revive.wav */; };
 		CC045BF81CCFA3C6009FEAAC /* animatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC045BF71CCFA3C6009FEAAC /* animatedImage.swift */; };
+		CC045BFC1CCFB686009FEAAC /* kiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC045BF91CCFB686009FEAAC /* kiss.mp3 */; };
+		CC045BFD1CCFB686009FEAAC /* hunger.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC045BFA1CCFB686009FEAAC /* hunger.wav */; };
+		CC045BFE1CCFB686009FEAAC /* thirst.aif in Resources */ = {isa = PBXBuildFile; fileRef = CC045BFB1CCFB686009FEAAC /* thirst.aif */; };
 		CCECF2FB1CBD058600AA0612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */; };
 		CCECF2FD1CBD058600AA0612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF2FC1CBD058600AA0612 /* ViewController.swift */; };
 		CCECF3001CBD058600AA0612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCECF2FE1CBD058600AA0612 /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		CC045BF31CCF8CFE009FEAAC /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		CC045BF51CCF9454009FEAAC /* revive.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = revive.wav; sourceTree = "<group>"; };
 		CC045BF71CCFA3C6009FEAAC /* animatedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animatedImage.swift; sourceTree = "<group>"; };
+		CC045BF91CCFB686009FEAAC /* kiss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kiss.mp3; sourceTree = "<group>"; };
+		CC045BFA1CCFB686009FEAAC /* hunger.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hunger.wav; sourceTree = "<group>"; };
+		CC045BFB1CCFB686009FEAAC /* thirst.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = thirst.aif; sourceTree = "<group>"; };
 		CCECF2F71CBD058600AA0612 /* little-monster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "little-monster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCECF2FC1CBD058600AA0612 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +132,9 @@
 				CCEE9D8A1CCE33AD00519B11 /* skull.wav */,
 				CC045BF11CCF8941009FEAAC /* water.wav */,
 				CC045BF51CCF9454009FEAAC /* revive.wav */,
+				CC045BF91CCFB686009FEAAC /* kiss.mp3 */,
+				CC045BFA1CCFB686009FEAAC /* hunger.wav */,
+				CC045BFB1CCFB686009FEAAC /* thirst.aif */,
 				CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */,
 				CCECF2FC1CBD058600AA0612 /* ViewController.swift */,
 				CCECF2FE1CBD058600AA0612 /* Main.storyboard */,
@@ -269,10 +278,13 @@
 				CCEE9D8F1CCE33AD00519B11 /* skull.wav in Resources */,
 				CCEE9D8C1CCE33AD00519B11 /* bite.wav in Resources */,
 				CC045BF41CCF8CFE009FEAAC /* Minecraft.ttf in Resources */,
+				CC045BFD1CCFB686009FEAAC /* hunger.wav in Resources */,
 				CC045BF21CCF8941009FEAAC /* water.wav in Resources */,
+				CC045BFE1CCFB686009FEAAC /* thirst.aif in Resources */,
 				CCEE9D8D1CCE33AD00519B11 /* death.wav in Resources */,
 				CCEE9D8E1CCE33AD00519B11 /* heart.wav in Resources */,
 				CCECF3051CBD058600AA0612 /* LaunchScreen.storyboard in Resources */,
+				CC045BFC1CCFB686009FEAAC /* kiss.mp3 in Resources */,
 				CCEE9D8B1CCE33AD00519B11 /* cave-music.mp3 in Resources */,
 				CCECF3021CBD058600AA0612 /* Assets.xcassets in Resources */,
 				CCECF3001CBD058600AA0612 /* Main.storyboard in Resources */,
