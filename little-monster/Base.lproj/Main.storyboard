@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qe6-dc-d2I">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,13 +8,14 @@
     <customFonts key="customFonts">
         <mutableArray key="Minecraft.ttf">
             <string>Minecraft</string>
+            <string>Minecraft</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--PickCharacterView-->
         <scene sceneID="0Kv-l5-Qhq">
             <objects>
-                <viewController id="qe6-dc-d2I" sceneMemberID="viewController">
+                <viewController id="qe6-dc-d2I" userLabel="PickCharacterView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cTB-I7-Bff"/>
                         <viewControllerLayoutGuide type="bottom" id="IuW-kP-AHU"/>
@@ -22,7 +23,39 @@
                     <view key="view" contentMode="scaleToFill" id="MPl-N3-H1v">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="wJ2-ex-aY5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick da pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4S-xA-eWp">
+                                <rect key="frame" x="198" y="73" width="205" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="6Tl-P4-pTo"/>
+                                    <constraint firstAttribute="height" constant="37" id="s0V-pa-dIU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="29"/>
+                                <color key="textColor" red="0.59613381410256405" green="0.59613381410256405" blue="0.59613381410256405" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wJ2-ex-aY5" firstAttribute="leading" secondItem="MPl-N3-H1v" secondAttribute="leading" id="1m6-1s-ddG"/>
+                            <constraint firstItem="J4S-xA-eWp" firstAttribute="top" secondItem="cTB-I7-Bff" secondAttribute="bottom" constant="53" id="KWn-Gj-Dq7"/>
+                            <constraint firstItem="wJ2-ex-aY5" firstAttribute="top" secondItem="MPl-N3-H1v" secondAttribute="top" id="Q3e-s9-Esk"/>
+                            <constraint firstItem="IuW-kP-AHU" firstAttribute="top" secondItem="wJ2-ex-aY5" secondAttribute="bottom" id="TiJ-Py-kbr"/>
+                            <constraint firstItem="J4S-xA-eWp" firstAttribute="centerX" secondItem="MPl-N3-H1v" secondAttribute="centerX" id="cge-lS-KHh"/>
+                            <constraint firstAttribute="trailing" secondItem="wJ2-ex-aY5" secondAttribute="trailing" id="hbV-jj-9Fk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1m6-1s-ddG"/>
+                                <exclude reference="hbV-jj-9Fk"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvk-GG-Z5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -249,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322" y="-59"/>
+            <point key="canvasLocation" x="-248" y="-78"/>
         </scene>
     </scenes>
     <resources>

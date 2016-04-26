@@ -16,6 +16,7 @@
 		CC045BFE1CCFB686009FEAAC /* thirst.aif in Resources */ = {isa = PBXBuildFile; fileRef = CC045BFB1CCFB686009FEAAC /* thirst.aif */; };
 		CC045C001CCFB988009FEAAC /* explosionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC045BFF1CCFB988009FEAAC /* explosionAnimation.swift */; };
 		CC045C021CCFBBA4009FEAAC /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC045C011CCFBBA4009FEAAC /* explosion.mp3 */; };
+		CC045C041CCFC43A009FEAAC /* PickCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC045C031CCFC43A009FEAAC /* PickCharacterView.swift */; };
 		CCECF2FB1CBD058600AA0612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */; };
 		CCECF2FD1CBD058600AA0612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF2FC1CBD058600AA0612 /* ViewController.swift */; };
 		CCECF3001CBD058600AA0612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCECF2FE1CBD058600AA0612 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		CC045BFB1CCFB686009FEAAC /* thirst.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = thirst.aif; sourceTree = "<group>"; };
 		CC045BFF1CCFB988009FEAAC /* explosionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = explosionAnimation.swift; sourceTree = "<group>"; };
 		CC045C011CCFBBA4009FEAAC /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		CC045C031CCFC43A009FEAAC /* PickCharacterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickCharacterView.swift; path = ../PickCharacterView.swift; sourceTree = "<group>"; };
 		CCECF2F71CBD058600AA0612 /* little-monster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "little-monster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCECF2FC1CBD058600AA0612 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				CC045BFB1CCFB686009FEAAC /* thirst.aif */,
 				CC045C011CCFBBA4009FEAAC /* explosion.mp3 */,
 				CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */,
+				CC045C031CCFC43A009FEAAC /* PickCharacterView.swift */,
 				CCECF2FC1CBD058600AA0612 /* ViewController.swift */,
 				CCECF2FE1CBD058600AA0612 /* Main.storyboard */,
 				CCECF3011CBD058600AA0612 /* Assets.xcassets */,
@@ -323,6 +326,7 @@
 				CCECF32B1CBD209000AA0612 /* MonsterImg.swift in Sources */,
 				CCECF3291CBD171000AA0612 /* DragImg.swift in Sources */,
 				CCECF2FD1CBD058600AA0612 /* ViewController.swift in Sources */,
+				CC045C041CCFC43A009FEAAC /* PickCharacterView.swift in Sources */,
 				CCECF2FB1CBD058600AA0612 /* AppDelegate.swift in Sources */,
 				CC045BF81CCFA3C6009FEAAC /* animatedImage.swift in Sources */,
 			);
