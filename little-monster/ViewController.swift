@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var monsterImg: MonsterImg!
     @IBOutlet weak var foodImg: DragImg!
     @IBOutlet weak var heartImg: DragImg!
+    @IBOutlet weak var waterImg: DragImg!
     @IBOutlet weak var penalty1Img: UIImageView!
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
         
         foodImg.dropTarget = monsterImg
         heartImg.dropTarget = monsterImg
+        waterImg.dropTarget = monsterImg
         
         penalty1Img.alpha = DIM_ALPHA
         penalty2Img.alpha = DIM_ALPHA
@@ -47,6 +49,7 @@ class ViewController: UIViewController {
         
         heartImg.alpha = DIM_ALPHA
         foodImg.alpha = DIM_ALPHA
+        waterImg.alpha = DIM_ALPHA
         
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
@@ -84,11 +87,15 @@ class ViewController: UIViewController {
         foodImg.userInteractionEnabled = false
         heartImg.alpha = DIM_ALPHA
         heartImg.userInteractionEnabled = false
+        waterImg.alpha = DIM_ALPHA
+        waterImg.userInteractionEnabled = false
         
         if currentItem == 0 {
             sfxHeart.play()
-        } else {
+        } else if currentItem == 1 {
             sfxBite.play()
+        } else {
+            sfxWater.play()
         }
         
         print("Item dropped on character")
@@ -134,20 +141,35 @@ class ViewController: UIViewController {
             }
         }
         
-        let rand = arc4random_uniform(2)
+        let rand = arc4random_uniform(3)
         
         if rand == 0 {
             foodImg.alpha = DIM_ALPHA
             foodImg.userInteractionEnabled = false
             
+            waterImg.alpha = DIM_ALPHA
+            waterImg.userInteractionEnabled = false
+            
             heartImg.alpha = OPAQUE
             heartImg.userInteractionEnabled = true
-        } else {
+        } else if rand == 1 {
             heartImg.alpha = DIM_ALPHA
             heartImg.userInteractionEnabled = false
             
+            waterImg.alpha = DIM_ALPHA
+            waterImg.userInteractionEnabled = false
+            
             foodImg.alpha = OPAQUE
             foodImg.userInteractionEnabled = true
+        } else {
+            foodImg.alpha = DIM_ALPHA
+            foodImg.userInteractionEnabled = false
+            
+            heartImg.alpha = DIM_ALPHA
+            heartImg.userInteractionEnabled = false
+            
+            waterImg.alpha = OPAQUE
+            waterImg.userInteractionEnabled = true
         }
         
         currentItem = rand

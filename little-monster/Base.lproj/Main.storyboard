@@ -60,27 +60,28 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="MFe-Kp-xIU" customClass="MonsterImg" customModule="little_monster" customModuleProvider="target">
+                                <rect key="frame" x="-90" y="206" width="646" height="344"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="344" id="JV7-xD-BTG"/>
+                                    <constraint firstAttribute="width" constant="646" id="PAY-Cg-YSB"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="U5a-hq-cAV">
                                 <rect key="frame" x="152" y="77" width="297" height="98"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="JzL-i6-n3F" customClass="DragImg" customModule="little_monster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="99" height="98"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="uZx-sU-loT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="uZx-sU-loT" customClass="DragImg" customModule="little_monster" customModuleProvider="target">
                                         <rect key="frame" x="99" y="0.0" width="99" height="98"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="99" id="1YT-cl-zdo"/>
+                                            <constraint firstAttribute="width" constant="95" id="1YT-cl-zdo"/>
                                             <constraint firstAttribute="height" constant="98" id="O4X-aR-6Zo"/>
                                         </constraints>
-                                        <variation key="heightClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="98" width="95" height="98"/>
-                                        </variation>
                                     </imageView>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="NiW-Ud-yLf" customClass="DragImg" customModule="little_monster" customModuleProvider="target">
                                         <rect key="frame" x="198" y="0.0" width="99" height="98"/>
-                                        <variation key="heightClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="196" width="95" height="98"/>
-                                        </variation>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -91,20 +92,12 @@
                                         <exclude reference="Bns-Jz-PgU"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact" axis="vertical" misplaced="YES" spacing="0.0">
-                                    <rect key="frame" x="460" y="45" width="95" height="294"/>
+                                <variation key="heightClass=compact" axis="vertical" spacing="0.0">
                                     <mask key="constraints">
                                         <include reference="Bns-Jz-PgU"/>
                                     </mask>
                                 </variation>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="MFe-Kp-xIU" customClass="MonsterImg" customModule="little_monster" customModuleProvider="target">
-                                <rect key="frame" x="-90" y="206" width="646" height="344"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="344" id="JV7-xD-BTG"/>
-                                    <constraint firstAttribute="width" constant="646" id="PAY-Cg-YSB"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -170,6 +163,7 @@
                         <outlet property="penalty1Img" destination="ipr-eN-JZA" id="BQn-qq-WKv"/>
                         <outlet property="penalty2Img" destination="H8V-WS-aOy" id="C98-cQ-8Gx"/>
                         <outlet property="penalty3Img" destination="GqG-Zd-ZBT" id="es5-PH-J1b"/>
+                        <outlet property="waterImg" destination="uZx-sU-loT" id="8bR-5o-ROB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
