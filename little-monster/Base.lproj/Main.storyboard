@@ -10,13 +10,14 @@
         <mutableArray key="Minecraft.ttf">
             <string>Minecraft</string>
             <string>Minecraft</string>
+            <string>Minecraft</string>
         </mutableArray>
     </customFonts>
     <scenes>
         <!--PickCharacterView-->
         <scene sceneID="0Kv-l5-Qhq">
             <objects>
-                <viewController id="qe6-dc-d2I" userLabel="PickCharacterView" customClass="PickCharacterView" customModule="little_monster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="1" id="qe6-dc-d2I" userLabel="PickCharacterView" customClass="PickCharacterView" customModule="little_monster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cTB-I7-Bff"/>
                         <viewControllerLayoutGuide type="bottom" id="IuW-kP-AHU"/>
@@ -25,8 +26,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="wJ2-ex-aY5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="wJ2-ex-aY5">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="Hcz-Za-Dcr"/>
+                                    <constraint firstAttribute="width" constant="600" id="jIX-fM-p8J"/>
+                                </constraints>
                                 <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                                 </variation>
@@ -53,7 +58,6 @@
                                         <state key="normal" image="idle1"/>
                                         <connections>
                                             <action selector="pickMuscle:" destination="qe6-dc-d2I" eventType="touchUpInside" id="JGh-Yb-ZuR"/>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="fZC-Pp-KNf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuY-Ni-f7S" userLabel="brains">
@@ -72,7 +76,6 @@
                                         </variation>
                                         <connections>
                                             <action selector="pickBrains:" destination="qe6-dc-d2I" eventType="touchUpInside" id="ESu-2w-ppG"/>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="5rH-dC-QFD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -83,17 +86,32 @@
                                     <rect key="frame" x="52" y="118" width="297" height="131"/>
                                 </variation>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZk-2U-2y3">
+                                <rect key="frame" x="234" y="266" width="133" height="68"/>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="40"/>
+                                <state key="normal" title="Go!">
+                                    <color key="titleColor" red="0.63375400640000001" green="0.63375400640000001" blue="0.63375400640000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="124" y="296" width="153" height="117"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="oSc-Iy-MIW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wJ2-ex-aY5" firstAttribute="leading" secondItem="MPl-N3-H1v" secondAttribute="leading" id="1m6-1s-ddG"/>
                             <constraint firstItem="KuX-E2-vNc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="J4S-xA-eWp" secondAttribute="bottom" constant="8" id="4f8-vM-0f8"/>
                             <constraint firstItem="J4S-xA-eWp" firstAttribute="centerX" secondItem="KuX-E2-vNc" secondAttribute="centerX" id="Cr4-Y3-pCV"/>
+                            <constraint firstItem="wJ2-ex-aY5" firstAttribute="centerX" secondItem="MPl-N3-H1v" secondAttribute="centerX" id="Eff-0u-FDX"/>
                             <constraint firstItem="J4S-xA-eWp" firstAttribute="top" secondItem="cTB-I7-Bff" secondAttribute="bottom" constant="53" id="KWn-Gj-Dq7"/>
                             <constraint firstItem="wJ2-ex-aY5" firstAttribute="top" secondItem="MPl-N3-H1v" secondAttribute="top" id="Q3e-s9-Esk"/>
                             <constraint firstItem="IuW-kP-AHU" firstAttribute="top" secondItem="wJ2-ex-aY5" secondAttribute="bottom" id="TiJ-Py-kbr"/>
                             <constraint firstItem="J4S-xA-eWp" firstAttribute="centerX" secondItem="MPl-N3-H1v" secondAttribute="centerX" id="cge-lS-KHh"/>
                             <constraint firstAttribute="trailing" secondItem="wJ2-ex-aY5" secondAttribute="trailing" id="hbV-jj-9Fk"/>
+                            <constraint firstItem="wJ2-ex-aY5" firstAttribute="centerY" secondItem="MPl-N3-H1v" secondAttribute="centerY" id="nqK-XJ-AC3"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -108,15 +126,19 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="brainsImg" destination="FuY-Ni-f7S" id="cQA-8O-1QS"/>
+                        <outlet property="muscleImg" destination="R2y-GQ-BE9" id="LMf-X2-A4K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kvk-GG-Z5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-978" y="-71"/>
+            <point key="canvasLocation" x="-987" y="-152"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="little_monster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="2" id="BYZ-38-t0r" customClass="ViewController" customModule="little_monster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -349,7 +371,4 @@
         <image name="walk (1)" width="271" height="239"/>
         <image name="water" width="300" height="300"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="fZC-Pp-KNf"/>
-    </inferredMetricsTieBreakers>
 </document>

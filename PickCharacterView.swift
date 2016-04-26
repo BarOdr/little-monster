@@ -11,7 +11,13 @@ import Foundation
 
 class PickCharacterView: UIViewController {
     
+    
+    @IBOutlet weak var muscleImg: UIButton!
+    @IBOutlet weak var brainsImg: UIButton!
+    
     var _chosenCharacter = ""
+    let DIM_ALPHA: CGFloat = 0.3
+    let OPAQUE: CGFloat = 1.0
     
     override func viewDidLoad() {
         
@@ -23,17 +29,18 @@ class PickCharacterView: UIViewController {
         
         
         destViewController.chosenCharacter = _chosenCharacter
-        
-        
-        
     }
     
     @IBAction func pickMuscle(sender: AnyObject) {
         _chosenCharacter = "muscle"
+        muscleImg.alpha = OPAQUE
+        brainsImg.alpha = DIM_ALPHA
     }
     
     @IBAction func pickBrains(sender: AnyObject) {
         _chosenCharacter = "brains"
+        brainsImg.alpha = OPAQUE
+        muscleImg.alpha = DIM_ALPHA
     }
 
 }
