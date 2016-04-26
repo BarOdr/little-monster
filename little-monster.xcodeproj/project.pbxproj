@@ -14,6 +14,8 @@
 		CC045BFC1CCFB686009FEAAC /* kiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC045BF91CCFB686009FEAAC /* kiss.mp3 */; };
 		CC045BFD1CCFB686009FEAAC /* hunger.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC045BFA1CCFB686009FEAAC /* hunger.wav */; };
 		CC045BFE1CCFB686009FEAAC /* thirst.aif in Resources */ = {isa = PBXBuildFile; fileRef = CC045BFB1CCFB686009FEAAC /* thirst.aif */; };
+		CC045C001CCFB988009FEAAC /* explosionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC045BFF1CCFB988009FEAAC /* explosionAnimation.swift */; };
+		CC045C021CCFBBA4009FEAAC /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC045C011CCFBBA4009FEAAC /* explosion.mp3 */; };
 		CCECF2FB1CBD058600AA0612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */; };
 		CCECF2FD1CBD058600AA0612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF2FC1CBD058600AA0612 /* ViewController.swift */; };
 		CCECF3001CBD058600AA0612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCECF2FE1CBD058600AA0612 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		CC045BF91CCFB686009FEAAC /* kiss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kiss.mp3; sourceTree = "<group>"; };
 		CC045BFA1CCFB686009FEAAC /* hunger.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hunger.wav; sourceTree = "<group>"; };
 		CC045BFB1CCFB686009FEAAC /* thirst.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = thirst.aif; sourceTree = "<group>"; };
+		CC045BFF1CCFB988009FEAAC /* explosionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = explosionAnimation.swift; sourceTree = "<group>"; };
+		CC045C011CCFBBA4009FEAAC /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		CCECF2F71CBD058600AA0612 /* little-monster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "little-monster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCECF2FC1CBD058600AA0612 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				CC045BF91CCFB686009FEAAC /* kiss.mp3 */,
 				CC045BFA1CCFB686009FEAAC /* hunger.wav */,
 				CC045BFB1CCFB686009FEAAC /* thirst.aif */,
+				CC045C011CCFBBA4009FEAAC /* explosion.mp3 */,
 				CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */,
 				CCECF2FC1CBD058600AA0612 /* ViewController.swift */,
 				CCECF2FE1CBD058600AA0612 /* Main.storyboard */,
@@ -144,6 +149,7 @@
 				CCECF3281CBD171000AA0612 /* DragImg.swift */,
 				CCECF32A1CBD209000AA0612 /* MonsterImg.swift */,
 				CC045BF71CCFA3C6009FEAAC /* animatedImage.swift */,
+				CC045BFF1CCFB988009FEAAC /* explosionAnimation.swift */,
 				CC045BF31CCF8CFE009FEAAC /* Minecraft.ttf */,
 			);
 			path = "little-monster";
@@ -283,6 +289,7 @@
 				CC045BFE1CCFB686009FEAAC /* thirst.aif in Resources */,
 				CCEE9D8D1CCE33AD00519B11 /* death.wav in Resources */,
 				CCEE9D8E1CCE33AD00519B11 /* heart.wav in Resources */,
+				CC045C021CCFBBA4009FEAAC /* explosion.mp3 in Resources */,
 				CCECF3051CBD058600AA0612 /* LaunchScreen.storyboard in Resources */,
 				CC045BFC1CCFB686009FEAAC /* kiss.mp3 in Resources */,
 				CCEE9D8B1CCE33AD00519B11 /* cave-music.mp3 in Resources */,
@@ -312,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC045C001CCFB988009FEAAC /* explosionAnimation.swift in Sources */,
 				CCECF32B1CBD209000AA0612 /* MonsterImg.swift in Sources */,
 				CCECF3291CBD171000AA0612 /* DragImg.swift in Sources */,
 				CCECF2FD1CBD058600AA0612 /* ViewController.swift in Sources */,

@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty3Img: UIImageView!
     @IBOutlet weak var reviveButton: UIButton!
     @IBOutlet weak var stoneImg: animatedImage!
+    @IBOutlet weak var explosionImg: explosionAnimation!
     
     let DIM_ALPHA: CGFloat = 0.2
     let INVISIBLE: CGFloat = 0.0
@@ -43,9 +44,11 @@ class ViewController: UIViewController {
     var sfxHunger: AVAudioPlayer!
     var sfxThirst: AVAudioPlayer!
     var sfxKiss: AVAudioPlayer!
+    var sfxExplosion: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         foodImg.dropTarget = monsterImg
         heartImg.dropTarget = monsterImg
@@ -67,6 +70,7 @@ class ViewController: UIViewController {
             try sfxHunger = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("hunger", ofType: "wav")!))
             try sfxThirst = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("thirst", ofType: "aif")!))
             try sfxKiss = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("kiss", ofType: "mp3")!))
+            try sfxExplosion = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("explosion", ofType: "mp3")!))
             
             musicPlayer.prepareToPlay()
             musicPlayer.play()
@@ -80,6 +84,7 @@ class ViewController: UIViewController {
             sfxHunger.prepareToPlay()
             sfxThirst.prepareToPlay()
             sfxKiss.prepareToPlay()
+            sfxExplosion.prepareToPlay()
             
             dimNeeds()
             dimPenalties()
@@ -112,7 +117,12 @@ class ViewController: UIViewController {
     func stoneDroppedOnCharacter(notif: AnyObject) {
         print("Stone dropped on character")
         if isAlive {
-        gameOver()
+            explosionImg.hidden = false
+            explosionImg.playExplosionAnimation()
+            sfxExplosion.play()
+            gameOver()
+
+        
         }
     }
     
