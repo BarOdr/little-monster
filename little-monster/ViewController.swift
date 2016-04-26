@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
     @IBOutlet weak var reviveButton: UIButton!
+    @IBOutlet weak var stoneImg: animatedImage!
     
     let DIM_ALPHA: CGFloat = 0.2
     let INVISIBLE: CGFloat = 0.0
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
     var timer: NSTimer!
     var monsterHappy = true
     var currentItem: UInt32 = 0
+    var isAlive = true
     
     var musicPlayer: AVAudioPlayer!
     var sfxBite: AVAudioPlayer!
@@ -45,9 +47,11 @@ class ViewController: UIViewController {
         foodImg.dropTarget = monsterImg
         heartImg.dropTarget = monsterImg
         waterImg.dropTarget = monsterImg
+        stoneImg.dropTarget = monsterImg
         
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "stoneDroppedOnCharacter:", name: "stoneDroppedOnTarget", object: nil)
         
         do {
             try musicPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
@@ -68,7 +72,8 @@ class ViewController: UIViewController {
             sfxWater.prepareToPlay()
             sfxRevive.prepareToPlay()
             
-            dimImgs()
+            dimNeeds()
+            dimPenalties()
             
         } catch let err as NSError {
             print(err.debugDescription)
@@ -82,12 +87,7 @@ class ViewController: UIViewController {
         monsterHappy = true
         startTimer()
         
-        foodImg.alpha = DIM_ALPHA
-        foodImg.userInteractionEnabled = false
-        heartImg.alpha = DIM_ALPHA
-        heartImg.userInteractionEnabled = false
-        waterImg.alpha = DIM_ALPHA
-        waterImg.userInteractionEnabled = false
+        dimNeeds()
         
         if currentItem == 0 {
             sfxHeart.play()
@@ -98,6 +98,13 @@ class ViewController: UIViewController {
         }
         
         print("Item dropped on character")
+    }
+    
+    func stoneDroppedOnCharacter(notif: AnyObject) {
+        print("Stone dropped on character")
+        if isAlive {
+        gameOver()
+        }
     }
     
     func startTimer() {
@@ -178,37 +185,55 @@ class ViewController: UIViewController {
     
     func gameOver(){
         timer.invalidate()
+        hideNeeds()
         monsterImg.playDeathAnimation()
         sfxDeath.play()
-        foodImg.alpha = INVISIBLE
-        heartImg.alpha = INVISIBLE
-        waterImg.alpha = INVISIBLE
         reviveButton.hidden = false
-        
+        isAlive = false
     }
     
 
     
-    func dimImgs() {
+    func dimNeeds() {
+
+        foodImg.alpha = DIM_ALPHA
+        foodImg.userInteractionEnabled = false
+        heartImg.alpha = DIM_ALPHA
+        heartImg.userInteractionEnabled = false
+        waterImg.alpha = DIM_ALPHA
+        waterImg.userInteractionEnabled = false
+    }
+    
+    func hideNeeds() {
+        foodImg.hidden = true
+        heartImg.hidden = true
+        waterImg.hidden = true
+    }
+    
+    func showNeeds() {
+        foodImg.hidden = false
+        heartImg.hidden = false
+        waterImg.hidden = false
+    }
+    
+    func dimPenalties() {
         penalty1Img.alpha = DIM_ALPHA
         penalty2Img.alpha = DIM_ALPHA
         penalty3Img.alpha = DIM_ALPHA
-        
-        heartImg.alpha = DIM_ALPHA
-        foodImg.alpha = DIM_ALPHA
-        waterImg.alpha = DIM_ALPHA
     }
     
     @IBAction func revive() {
         reviveButton.hidden = true
-        monsterImg.playIdleAnimation()
         penalties = 0
         monsterHappy = true
-        dimImgs()
+        dimNeeds()
+        showNeeds()
+        dimPenalties()
+        monsterImg.playReviveAnimation()
+        monsterImg.playIdleAnimation()
         startTimer()
         sfxRevive.play()
-        
-        
+        isAlive = true
     }
 }
 

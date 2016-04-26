@@ -10,6 +10,7 @@
 		CC045BF21CCF8941009FEAAC /* water.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC045BF11CCF8941009FEAAC /* water.wav */; };
 		CC045BF41CCF8CFE009FEAAC /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC045BF31CCF8CFE009FEAAC /* Minecraft.ttf */; };
 		CC045BF61CCF9454009FEAAC /* revive.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC045BF51CCF9454009FEAAC /* revive.wav */; };
+		CC045BF81CCFA3C6009FEAAC /* animatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC045BF71CCFA3C6009FEAAC /* animatedImage.swift */; };
 		CCECF2FB1CBD058600AA0612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */; };
 		CCECF2FD1CBD058600AA0612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF2FC1CBD058600AA0612 /* ViewController.swift */; };
 		CCECF3001CBD058600AA0612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCECF2FE1CBD058600AA0612 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		CC045BF11CCF8941009FEAAC /* water.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = water.wav; sourceTree = "<group>"; };
 		CC045BF31CCF8CFE009FEAAC /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		CC045BF51CCF9454009FEAAC /* revive.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = revive.wav; sourceTree = "<group>"; };
+		CC045BF71CCFA3C6009FEAAC /* animatedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animatedImage.swift; sourceTree = "<group>"; };
 		CCECF2F71CBD058600AA0612 /* little-monster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "little-monster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCECF2FC1CBD058600AA0612 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				CCECF3061CBD058600AA0612 /* Info.plist */,
 				CCECF3281CBD171000AA0612 /* DragImg.swift */,
 				CCECF32A1CBD209000AA0612 /* MonsterImg.swift */,
+				CC045BF71CCFA3C6009FEAAC /* animatedImage.swift */,
 				CC045BF31CCF8CFE009FEAAC /* Minecraft.ttf */,
 			);
 			path = "little-monster";
@@ -301,6 +304,7 @@
 				CCECF3291CBD171000AA0612 /* DragImg.swift in Sources */,
 				CCECF2FD1CBD058600AA0612 /* ViewController.swift in Sources */,
 				CCECF2FB1CBD058600AA0612 /* AppDelegate.swift in Sources */,
+				CC045BF81CCFA3C6009FEAAC /* animatedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
