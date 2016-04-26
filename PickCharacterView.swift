@@ -11,8 +11,29 @@ import Foundation
 
 class PickCharacterView: UIViewController {
     
+    var _chosenCharacter = ""
+    
     override func viewDidLoad() {
         
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var destViewController : ViewController = segue.destinationViewController as! ViewController
+        
+        
+        destViewController.chosenCharacter = _chosenCharacter
+        
+        
+        
+    }
+    
+    @IBAction func pickMuscle(sender: AnyObject) {
+        _chosenCharacter = "muscle"
+    }
+    
+    @IBAction func pickBrains(sender: AnyObject) {
+        _chosenCharacter = "brains"
+    }
+
 }

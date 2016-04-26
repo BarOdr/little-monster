@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -15,7 +16,7 @@
         <!--PickCharacterView-->
         <scene sceneID="0Kv-l5-Qhq">
             <objects>
-                <viewController id="qe6-dc-d2I" userLabel="PickCharacterView" sceneMemberID="viewController">
+                <viewController id="qe6-dc-d2I" userLabel="PickCharacterView" customClass="PickCharacterView" customModule="little_monster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cTB-I7-Bff"/>
                         <viewControllerLayoutGuide type="bottom" id="IuW-kP-AHU"/>
@@ -40,10 +41,54 @@
                                 <color key="textColor" red="0.59613381410256405" green="0.59613381410256405" blue="0.59613381410256405" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alignment="bottom" spacing="-50" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-E2-vNc">
+                                <rect key="frame" x="152" y="128" width="297" height="131"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2y-GQ-BE9" userLabel="muscle">
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="131"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="188" id="fcU-EQ-41W"/>
+                                            <constraint firstAttribute="height" constant="131" id="qAZ-Kv-qEG"/>
+                                        </constraints>
+                                        <state key="normal" image="idle1"/>
+                                        <connections>
+                                            <action selector="pickMuscle:" destination="qe6-dc-d2I" eventType="touchUpInside" id="JGh-Yb-ZuR"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" id="fZC-Pp-KNf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuY-Ni-f7S" userLabel="brains">
+                                        <rect key="frame" x="138" y="20" width="159" height="111"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="111" id="0eL-bY-s8J"/>
+                                            <constraint firstAttribute="width" secondItem="FuY-Ni-f7S" secondAttribute="height" multiplier="53:37" id="Lln-F5-4Uk"/>
+                                            <constraint firstAttribute="width" constant="159" id="pNw-LH-4u0"/>
+                                        </constraints>
+                                        <state key="normal" image="walk (1)"/>
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="138" y="20" width="159" height="111"/>
+                                        </variation>
+                                        <variation key="widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="138" y="20" width="159" height="111"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="pickBrains:" destination="qe6-dc-d2I" eventType="touchUpInside" id="ESu-2w-ppG"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" id="5rH-dC-QFD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="152" y="128" width="297" height="131"/>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="52" y="118" width="297" height="131"/>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wJ2-ex-aY5" firstAttribute="leading" secondItem="MPl-N3-H1v" secondAttribute="leading" id="1m6-1s-ddG"/>
+                            <constraint firstItem="KuX-E2-vNc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="J4S-xA-eWp" secondAttribute="bottom" constant="8" id="4f8-vM-0f8"/>
+                            <constraint firstItem="J4S-xA-eWp" firstAttribute="centerX" secondItem="KuX-E2-vNc" secondAttribute="centerX" id="Cr4-Y3-pCV"/>
                             <constraint firstItem="J4S-xA-eWp" firstAttribute="top" secondItem="cTB-I7-Bff" secondAttribute="bottom" constant="53" id="KWn-Gj-Dq7"/>
                             <constraint firstItem="wJ2-ex-aY5" firstAttribute="top" secondItem="MPl-N3-H1v" secondAttribute="top" id="Q3e-s9-Esk"/>
                             <constraint firstItem="IuW-kP-AHU" firstAttribute="top" secondItem="wJ2-ex-aY5" secondAttribute="bottom" id="TiJ-Py-kbr"/>
@@ -54,6 +99,12 @@
                             <mask key="constraints">
                                 <exclude reference="1m6-1s-ddG"/>
                                 <exclude reference="hbV-jj-9Fk"/>
+                                <exclude reference="4f8-vM-0f8"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="4f8-vM-0f8"/>
                             </mask>
                         </variation>
                     </view>
@@ -295,6 +346,10 @@
         <image name="livespanel" width="468" height="137"/>
         <image name="skull" width="95" height="98"/>
         <image name="stone1" width="96" height="100"/>
+        <image name="walk (1)" width="271" height="239"/>
         <image name="water" width="300" height="300"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fZC-Pp-KNf"/>
+    </inferredMetricsTieBreakers>
 </document>

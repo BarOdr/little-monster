@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     var monsterHappy = true
     var currentItem: UInt32 = 0
     var isAlive = true
+    var chosenCharacter = ""
     
     var musicPlayer: AVAudioPlayer!
     var sfxBite: AVAudioPlayer!
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
         waterImg.dropTarget = monsterImg
         stoneImg.dropTarget = monsterImg
         
+        print (chosenCharacter)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "stoneDroppedOnCharacter:", name: "stoneDroppedOnTarget", object: nil)
