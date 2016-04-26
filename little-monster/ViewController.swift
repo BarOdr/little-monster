@@ -97,6 +97,7 @@ class ViewController: UIViewController {
         
         startTimer()
         
+        playIdleAnimation()
     }
     
     func itemDroppedOnCharacter(notif: AnyObject) {
@@ -210,7 +211,7 @@ class ViewController: UIViewController {
     func gameOver(){
         timer.invalidate()
         hideNeeds()
-        monsterImg.playDeathAnimation()
+        playDeathAnimation()
         sfxDeath.play()
         reviveButton.hidden = false
         isAlive = false
@@ -253,11 +254,35 @@ class ViewController: UIViewController {
         dimNeeds()
         showNeeds()
         dimPenalties()
-        monsterImg.playReviveAnimation()
-        monsterImg.playIdleAnimation()
+        playReviveAnimation()
+        playIdleAnimation()
         startTimer()
         sfxRevive.play()
         isAlive = true
+    }
+    
+    func playIdleAnimation() {
+        if chosenCharacter == "muscle" {
+            monsterImg.playMuscleIdleAnimation()
+        } else {
+            monsterImg.playBrainsIdleAnimation()
+        }
+    }
+    
+    func playDeathAnimation() {
+        if chosenCharacter == "muscle" {
+            monsterImg.playMuscleDeathAnimation()
+        } else {
+            monsterImg.playBrainsDeathAnimation()
+        }
+    }
+    
+    func playReviveAnimation() {
+        if chosenCharacter == "muscle" {
+            monsterImg.playMuscleReviveAnimation()
+        } else {
+            monsterImg.playBrainsReviveAnimation()
+        }
     }
 }
 

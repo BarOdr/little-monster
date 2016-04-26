@@ -67,7 +67,7 @@
                                             <constraint firstAttribute="width" secondItem="FuY-Ni-f7S" secondAttribute="height" multiplier="53:37" id="Lln-F5-4Uk"/>
                                             <constraint firstAttribute="width" constant="159" id="pNw-LH-4u0"/>
                                         </constraints>
-                                        <state key="normal" image="walk (1)"/>
+                                        <state key="normal" image="walk 1"/>
                                         <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="138" y="20" width="159" height="111"/>
                                         </variation>
@@ -368,7 +368,7 @@
         <image name="livespanel" width="468" height="137"/>
         <image name="skull" width="95" height="98"/>
         <image name="stone1" width="96" height="100"/>
-        <image name="walk (1)" width="271" height="239"/>
+        <image name="walk 1" width="271" height="239"/>
         <image name="water" width="300" height="300"/>
     </resources>
 </document>
