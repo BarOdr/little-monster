@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     var sfxHeart: AVAudioPlayer!
     var sfxDeath: AVAudioPlayer!
     var sfxSkull: AVAudioPlayer!
+    var sfxWater: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,7 @@ class ViewController: UIViewController {
             try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
             try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
             try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
+            try sfxWater = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("water", ofType: "wav")!))
             
             musicPlayer.prepareToPlay()
             musicPlayer.play()
@@ -64,6 +66,7 @@ class ViewController: UIViewController {
             sfxDeath.prepareToPlay()
             sfxHeart.prepareToPlay()
             sfxSkull.prepareToPlay()
+            sfxWater.prepareToPlay()
             
         } catch let err as NSError {
             print(err.debugDescription)

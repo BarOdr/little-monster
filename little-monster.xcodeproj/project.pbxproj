@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC045BF21CCF8941009FEAAC /* water.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC045BF11CCF8941009FEAAC /* water.wav */; };
 		CCECF2FB1CBD058600AA0612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */; };
 		CCECF2FD1CBD058600AA0612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCECF2FC1CBD058600AA0612 /* ViewController.swift */; };
 		CCECF3001CBD058600AA0612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCECF2FE1CBD058600AA0612 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC045BF11CCF8941009FEAAC /* water.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = water.wav; sourceTree = "<group>"; };
 		CCECF2F71CBD058600AA0612 /* little-monster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "little-monster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCECF2FC1CBD058600AA0612 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				CCEE9D881CCE33AD00519B11 /* death.wav */,
 				CCEE9D891CCE33AD00519B11 /* heart.wav */,
 				CCEE9D8A1CCE33AD00519B11 /* skull.wav */,
+				CC045BF11CCF8941009FEAAC /* water.wav */,
 				CCECF2FA1CBD058600AA0612 /* AppDelegate.swift */,
 				CCECF2FC1CBD058600AA0612 /* ViewController.swift */,
 				CCECF2FE1CBD058600AA0612 /* Main.storyboard */,
@@ -255,6 +258,7 @@
 			files = (
 				CCEE9D8F1CCE33AD00519B11 /* skull.wav in Resources */,
 				CCEE9D8C1CCE33AD00519B11 /* bite.wav in Resources */,
+				CC045BF21CCF8941009FEAAC /* water.wav in Resources */,
 				CCEE9D8D1CCE33AD00519B11 /* death.wav in Resources */,
 				CCEE9D8E1CCE33AD00519B11 /* heart.wav in Resources */,
 				CCECF3051CBD058600AA0612 /* LaunchScreen.storyboard in Resources */,
